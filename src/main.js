@@ -22,8 +22,7 @@
             }
         }
     });
+
     require(['can', 'jquery', 'bootstrap'], function(can, $) {
-        console.log(arguments);
-        $('.dropdown-toggle').dropdown('toggle');
     });
 })(window, document);
