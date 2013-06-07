@@ -7,6 +7,7 @@
     "devDependencies": {
         "grunt": "*",
         "grunt-contrib-watch": "*",
+        "grunt-contrib-connect": "*",
         "grunt-contrib-requirejs": "*",
         "grunt-contrib-compass": "*"
     },

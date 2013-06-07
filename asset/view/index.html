@@ -1,20 +1,8 @@
 <html>
   <head>
     <link href="css/main.css" rel="stylesheet">
-    <script type="text/javascript" src="/js/vendor/jquery-2.0.2.js"></script>
-    <script type="text/javascript" src="/js/vendor/can.jquery.js"></script>
     <script type="text/javascript" src="/js/vendor/require.js" data-main="js/main"></script>
   </head>
   <body>
-    <ul class="clearfix">
-      <li class="brand">FLASHBACK</li>
-      {% for bookmark in bookmarks %}
-      <li data-dt="{{ bookmark.bookmarkAt }}">
-        <button class="delete-bookmark">X</button>
-        <time>{{ bookmark.bookmarkAt|date('Y-m-d H:i:s') }}</time>
-        <h2><a href="{{ bookmark.url }}">{{ bookmark.title }}</a></h2>
-      </li>
-      {% endfor %}
-    </ul>
   </body>
 </html>

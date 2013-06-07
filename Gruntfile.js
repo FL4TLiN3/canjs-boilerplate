@@ -2,12 +2,21 @@ module.exports = function(grunt) {
     var pkg = grunt.file.readJSON('package.json');
 
     grunt.initConfig({
+        connect: {
+            server: {
+                options: {
+                    hostname: '*',
+                    port: 3000,
+                    base: 'pub/'
+                }
+            }
+        },
         requirejs: {
             compile: {
                 options: {
                     baseUrl: 'asset/js',
                     name: 'main',
-                    out: 'public/js/xmatome.min.js'
+                    out: 'pub/js/main.min.js'
                 }
             }
         },
@@ -43,5 +52,5 @@ module.exports = function(grunt) {
         }
     }
 
-    grunt.registerTask('dev',  ['requirejs', 'compass', 'watch']);
+    grunt.registerTask('dev', ['connect', 'watch']);
 };
